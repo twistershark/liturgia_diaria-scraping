@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
 
-async function scrapeLiturgia(url) {
+
+async function scrapeLiturgia(url, date) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
@@ -145,11 +147,24 @@ async function scrapeLiturgia(url) {
     }
   });
 
-  console.log(parsedLeituras);
+  let data = JSON.stringify(parsedLeituras);
+  fs.writeFileSync(`${date}.txt`, data);
 
   browser.close();
 }
 
+async function generateFiles(){
+  for (let i = 0; i < 10; i++){
+    await scrapeLiturgia(
+      `https://liturgiadiaria.cnbb.org.br/app/user/user/UserView.php?ano=2020&mes=9&dia=${i}`,
+      `${i}-09-2020`,
+    );
+  }
+}
+
+generateFiles();
 
 
-scrapeLiturgia('https://liturgiadiaria.cnbb.org.br/app/user/user/UserView.php?ano=2020&mes=9&dia=27');
+
+
+  
