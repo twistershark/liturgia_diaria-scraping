@@ -153,12 +153,16 @@ async function scrapeLiturgia(url, date) {
   browser.close();
 }
 
+let daysInMonth = new Date(2020, 3, 0);
+daysInMonth = daysInMonth.getDate();
+
 async function generateFiles(){
-  for (let i = 0; i < 10; i++){
+  for (let i = 1; i <= daysInMonth; i++){
     await scrapeLiturgia(
       `https://liturgiadiaria.cnbb.org.br/app/user/user/UserView.php?ano=2020&mes=9&dia=${i}`,
       `${i}-09-2020`,
     );
+    setTimeout(() => {}, 8000);
   }
 }
 
