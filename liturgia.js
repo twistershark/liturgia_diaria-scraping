@@ -130,7 +130,13 @@ async function scrapeLiturgia(url) {
         evangelhoTitulo = evangelhoTitulo.replace(/\t|\n/g, '');
       }
       
-      const finalEvangelho = textArray.findIndex(palavra => palavra === 'Palavra da Salvação. ' || ' Palavra da Salvação ' )
+      let finalEvangelho;
+      if(textArray.findIndex(palavra => palavra === 'Palavra da Salvação. ') === -1){
+        finalEvangelho = textArray.findIndex(palavra => palavra === 'Palavra da Salvação ');
+      }else {
+        finalEvangelho = textArray.findIndex(palavra => palavra === 'Palavra da Salvação. ');
+      }
+      
       const evangelhoTexto = textArray.splice(0, finalEvangelho).join('').replace(/  /g, ' ');
 
       const evangelho = { evangelhoTitulo, evangelhoTexto };
@@ -146,4 +152,4 @@ async function scrapeLiturgia(url) {
 
 
 
-scrapeLiturgia('https://liturgiadiaria.cnbb.org.br/app/user/user/UserView.php?ano=2020&mes=10&dia=25');
+scrapeLiturgia('https://liturgiadiaria.cnbb.org.br/app/user/user/UserView.php?ano=2020&mes=9&dia=27');
