@@ -1,6 +1,6 @@
 # :sparkles: Web Scraping - Liturgia Diaria
 
-Criei esse web scraper para poder capturar a liturgia diaria da página da CNBB de forma automática para que eu consiga utilizar esses dados no aplicativo mobile que estou desenvolvendo.
+Criei esse web scraper para poder capturar a liturgia diaria da página da CNBB de forma automática para utilizar esses dados em um projeto pessoal.
 
 Exemplo do arquivo texto gerado pelo web scraper:
 ```
@@ -23,7 +23,7 @@ Exemplo do arquivo texto gerado pelo web scraper:
 
 ## :rocket: Como utilizar
 
-Dentro do arquivo liturgia.js tem um loop com a url do site da CNBB. Através desse loop é da URL, é fácil alterar os dias de liturgia que você deseja que sejam capturados.
+Dentro do arquivo liturgia.js tem um loop com a url do site da CNBB. Através desse loop e da URL, é fácil alterar os dias de liturgia que você deseja que sejam capturados.
 
 
 ### :card_file_box: Pré-requisitos
@@ -44,22 +44,22 @@ Depois disso, para executar o web scraper basta executar esse comando no termina
 node ./liturgia.js
 ```
 
-## 🤓 Author
+## 🤓 Autor
 
 👤 **Paulo Victor da Silva**
 
 * Github: [@twistershark](https://github.com/twistershark)
 * LinkedIn: [@paulovictorsilva](https://linkedin.com/in/paulovictorsilva)
 
-## Show your support
+## Ajude
 
-Give a ⭐️ if this project helped you!
+Dê uma ⭐️ se esse projeto the ajudou!
 
-## 🤝 Contributing
-Feel free to contribute to this project. Every help is welcome!
+## 🤝 Contribuições
+Fique à vontade para contribuir para esse projeto. Toda ajuda é bem-vinda!
 
 ---
 
-## 📃 License
+## 📃 Licença
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+Projeto licenciado com a licença MIT - veja o [LICENSE.md](LICENSE) para mais detalhes.
