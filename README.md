@@ -53,7 +53,7 @@ node ./liturgia.js
 
 ## Ajude
 
-Dê uma ⭐️ se esse projeto the ajudou!
+Dê uma ⭐️ se esse projeto te ajudou!
 
 ## 🤝 Contribuições
 Fique à vontade para contribuir para esse projeto. Toda ajuda é bem-vinda!
